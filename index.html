@@ -3,216 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trade With Purab</title>
+<title>Trade with Purab</title>
 
-<!-- META PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '1584188323038473');
-fbq('track', 'PageView');
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
-
-body{
-  background: linear-gradient(135deg,#000000,#0a0f2c,#000000);
-  color:white;
-  text-align:center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* CONTAINER */
-.container{
-  max-width:420px;
-  margin:auto;
-  padding:20px;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a1a3f, #08142b);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* PROFILE */
-.profile img{
-  width:90px;
-  border-radius:50%;
-  border:3px solid gold;
-  box-shadow:0 0 15px gold;
+/* MAIN CONTAINER */
+.container {
+    width: 95%;
+    max-width: 420px;
+    text-align: center;
 }
 
-/* HEADING */
-h1{
-  margin:10px 0;
-  color:#ffd700;
-  letter-spacing:1px;
+/* HEADER */
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #7fd6ff;
+    line-height: 1.3;
 }
 
-/* TAGLINE */
-.tagline{
-  color:#60a5fa;
+/* CARD */
+.card {
+    padding: 18px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* TIMER */
-.timer{
-  margin:12px 0;
-  font-size:18px;
-  color:#ffd700;
-  font-weight:bold;
-  letter-spacing:1px;
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #7fd6ff;
 }
 
-/* BUTTON */
-.btn{
-  display:block;
-  margin:20px 0;
-  padding:15px;
-  border-radius:40px;
-  background:linear-gradient(45deg,#1e3a8a,#38bdf8);
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-  box-shadow:0 0 20px rgba(56,189,248,0.6);
-  transition:0.3s;
+.card p {
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
-.btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 30px gold;
+/* LIST */
+ul {
+    text-align: left;
+    padding-left: 15px;
 }
 
-/* CARDS */
-.card{
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,215,0,0.2);
-  padding:15px;
-  border-radius:15px;
-  margin:10px 0;
-  text-align:left;
-  backdrop-filter:blur(10px);
-  transition:0.3s;
+ul li {
+    font-size: 13px;
+    margin: 6px 0;
 }
 
-.card:hover{
-  transform:translateY(-5px);
-  border-color:gold;
+ul li span {
+    color: #7fd6ff;
+    font-weight: bold;
 }
 
-.card h3{
-  color:#ffd700;
+/* 🌈 BUTTON */
+.btn {
+    display: block;
+    margin-top: 15px;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(270deg,
+        #ff0000, #ff7f00, #ffff00, #00ff00,
+        #00ffff, #0000ff, #8b00ff);
+    background-size: 1400% 1400%;
+    animation: gradientMove 6s ease infinite;
 }
 
-.card p{
-  color:#cbd5f5;
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
-/* NOTIFICATION */
-.notify{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  background:#000;
-  border:1px solid gold;
-  padding:10px 15px;
-  border-radius:10px;
-  font-size:13px;
-  display:none;
-  color:#ffd700;
+/* TRUST TEXT */
+.trust {
+    font-size: 11px;
+    margin-top: 8px;
+    color: #aaa;
 }
 
-/* FOOTER */
-.footer{
-  margin-top:15px;
-  color:#60a5fa;
+/* POPUP */
+.popup {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background: #1c2e4a;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    display: none;
 }
+
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
-<h1>TRADE WITH PURAB </h1>
-<p class="tagline">✔ Trusted by thousands of traders</p>
+<h1>Welcome To<br>Trade with Purab</h1>
 
-<!-- TIMER -->
-<div class="timer">
-Offer ends in: <span id="countdown">00:15</span>
+<div class="card">
+    <h2>VIP SIGNALS</h2>
+    <p>Professional FX trading signals with high accuracy</p>
+
+    <ul>
+        <li><span>1.</span> Real Market Analysis</li>
+        <li><span>2.</span> Entry & Exit Points</li>
+        <li><span>3.</span> Risk Management</li>
+        <li><span>4.</span> 24/7 Support</li>
+    </ul>
 </div>
 
-<!-- BUTTON -->
-<a href="https://t.me/+DZfSUBjiKG1jMGVl" class="btn" onclick="trackJoin()">
-🚀 Join on Telegram
+<a href="https://t.me/+0CLaYYUlmQ1iMmRl" class="btn">
+    Join Trade with Purab 🚀
 </a>
 
-<div class="card">
-<h3>📊 Market Insights</h3>
-<p>Real-time updates & expert discussion</p>
-</div>
-
-<div class="card">
-<h3>📚 Trading Strategies</h3>
-<p>Learn & grow your portfolio</p>
-</div>
-
-<div class="card">
-<h3>⚡ Tips & Tricks</h3>
-<p>Proven trading methods</p>
-</div>
-
-<!-- BUTTON -->
-<a href="https://t.me/+DZfSUBjiKG1jMGVl" class="btn" onclick="trackJoin()">
-🚀 Join on Telegram
-</a>
-
-<div class="footer">
-"Aaj mehnat kar lo, kal naam apna khud banega."
-</div>
+<p class="trust">✔ Trusted by traders</p>
 
 </div>
 
-<!-- NOTIFICATION -->
-<div class="notify" id="notify"></div>
+<div id="popup" class="popup"></div>
 
 <script>
-// ⏳ 15 SEC TIMER
-let time = 15;
-let el = document.getElementById("countdown");
+const names = ["Ravi", "Amit", "Rahul", "Karan", "Vikram"];
 
-let timer = setInterval(()=>{
-  time--;
-  el.innerText = "00:" + (time < 10 ? "0"+time : time);
+function showPopup() {
+    const popup = document.getElementById("popup");
+    const randomName = names[Math.floor(Math.random() * names.length)];
 
-  if(time <= 0){
-    clearInterval(timer);
-    window.location.href = "https://t.me/+DZfSUBjiKG1jMGVl";
-  }
-},1000);
+    popup.innerHTML = "🔔 " + randomName + " just joined!";
+    popup.style.display = "block";
 
-// 🔔 NOTIFICATIONS
-let names = ["Rahul","Amit","Sneha","Vikas","Priya","Arjun","Rohit"];
-function showNotification(){
-  let n = names[Math.floor(Math.random()*names.length)];
-  let box = document.getElementById("notify");
-
-  box.innerText = n + " just joined!";
-  box.style.display = "block";
-
-  setTimeout(()=>box.style.display="none",3000);
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 2500);
 }
-setInterval(showNotification,5000);
 
-// 📈 TRACKING
-function trackJoin(){
-  fbq('track','Lead');
-
-  let clicks = localStorage.getItem("clicks") || 0;
-  clicks++;
-  localStorage.setItem("clicks", clicks);
-}
+setInterval(showPopup, 5000);
 </script>
 
 </body>
