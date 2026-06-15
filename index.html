@@ -5,162 +5,113 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trade With Purab</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
-  margin:;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
-  background: radial-gradient(circle at top, #0b3d2e, #02140f);
-  color:white;
-  text-align:center;
-  overflow-x:hidden;
-}
-
-/* Background particles */
-body::before{
-  content:"";
-  position:fixed;
-  width:100%;
-  height:100%;
-  background-image: radial-gradient(#00ffb3 1px, transparent 1px);
-  background-size:30px 30px;
-  opacity:0.1;
-  z-index:-1;
+    background: radial-gradient(circle at top, #0a1f44, #020b1f);
+    color: white;
+    text-align: center;
 }
 
 /* Container */
 .container{
-  padding:14px 20px;
+    padding: 25px 15px;
 }
 
-/* Logo Circle */
-.logo-circle{
-  width:100px;
-  height:100px;
-  margin:20px auto;
-  border-radius:50%;
-  background:linear-gradient(45deg,#00ffb3,#00c27a);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 0 40px rgba(0,255,179,0.4);
-  animation: pulse 2s infinite;
-}
-
-.logo-circle img{
-  width:140px;
-  border-radius:50%;
+/* Profile */
+.profile img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:3px solid #00c3ff;
 }
 
 /* Heading */
 h1{
-  font-size:32px;
-  font-weight:800;
+    font-size:26px;
+    margin-top:15px;
 }
-
 h1 span{
-  color:#00ffb3;
+    color:#00c3ff;
 }
 
-/* Subtext */
+/* Sub */
 .sub{
-  margin-top:10px;
-  color:#ccc;
-  font-size:14px;
+    font-size:14px;
+    margin-top:10px;
+    color:#cfcfcf;
 }
 
-/* Cards */
-.cards{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
-  margin-top:20px;
+/* Counter */
+.counter{
+    margin-top:10px;
+    font-size:15px;
+    color:#00c3ff;
 }
 
-.card{
-  width:120px;
-  padding:15px;
-  border-radius:12px;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,0.1);
-  transition:0.3s;
+/* Buttons */
+.btn-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-top:20px;
 }
 
-.card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 0 15px rgba(0,255,179,0.4);
+.small-btn{
+    padding:10px 15px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.2);
+    background: rgba(0,195,255,0.08);
+    font-size:13px;
 }
 
-/* Stats */
-.stats{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-top:8px;
-}
-
-.stat{
-  background:rgba(255,255,255,0.05);
-  padding:10px 15px;
-  border-radius:10px;
-  font-weight:600;
-}
-
-.stat span{
-  display:block;
-  font-size:22px;
-  color:#00ffb3;
+/* Timer */
+.timer{
+    margin-top:20px;
+    font-size:18px;
+    color:#4db8ff;
+    font-weight:600;
 }
 
 /* Join Button */
 .join-btn{
-  margin-top:40px;
+    display:inline-block;
+    margin-top:25px;
+    padding:16px 30px;
+    border-radius:40px;
+    background: linear-gradient(90deg, #00c3ff, #007bff);
+    color:white;
+    font-weight:600;
+    text-decoration:none;
+    box-shadow:0 0 20px rgba(0,195,255,0.5);
+    transition:0.3s;
 }
 
-.join-btn a{
-  text-decoration:none;
-  background:linear-gradient(45deg,#00ffb3,#00c27a);
-  padding:15px 40px;
-  border-radius:25px;
-  color:black;
-  font-weight:700;
-  font-size:18px;
-  display:inline-block;
-  transition:0.3s;
-  box-shadow:0 0 20px rgba(0,255,179,0.5);
+.join-btn:hover{
+    transform: scale(1.05);
 }
 
-.join-btn a:hover{
-  transform:scale(1.05);
-  box-shadow:0 0 30px rgba(0,255,179,0.8);
-}
-
-/* Animation */
-@keyframes pulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.05);}
-  100%{transform:scale(1);}
-}
-
-/* Fake Live Join */
-.live{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  background:#0f2e25;
-  padding:10px 15px;
-  border-radius:10px;
-  font-size:13px;
-  display:none;
-  box-shadow:0 0 10px rgba(0,255,179,0.3);
+/* Notification */
+.notification{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#0a1f44;
+    padding:10px 15px;
+    border-radius:10px;
+    font-size:13px;
+    display:none;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 </style>
 <!-- Meta Pixel Code -->
@@ -185,50 +136,74 @@ src="https://www.facebook.com/tr?id=1502076798287038&ev=PageView&noscript=1"
 
 <div class="container">
 
-  <div class="logo-circle">
-    <img src="https://i.ibb.co/qMB408vK/hqdefault-1.jpg" alt="logo">
-  </div>
+<div class="profile">
+<img src="https://via.placeholder.com/150">
+</div>
 
-  <h1>TRADE WITH <span>PURAB</span></h1>
+<h1>TRADE WITH <span>PURAB</span></h1>
 
-  <p class="sub">
-    India's Top SEBI Analyst • 60K+ Members <br>
-    Expert Calls • Banknifty • Nifty • Finnifty
-  </p>
+<div class="sub">
+India's Top SEBI Analyst • Expert Calls <br>
+Banknifty • Nifty • Finnifty
+</div>
 
-  <div class="cards">
-    <div class="card">BANK NIFTY</div>
-    <div class="card">NIFTY 50</div>
-    <div class="card">FINNIFTY</div>
-    <div class="card">SENSEX</div>
-  </div>
- 
-  <div class="join-btn">
-    <a href="https://t.me/+0CLaYYUlmQ1iMmRl" class="btn" onclick="">
-      Join FOR FREE 🚀
-    </a>
-  </div>
+<div class="counter">
+🔥 <span id="members">61234</span> Traders Joined
+</div>
+
+<div class="btn-row">
+<div class="small-btn">BANK NIFTY</div>
+<div class="small-btn">NIFTY 50</div>
+<div class="small-btn">FINNIFTY</div>
+<div class="small-btn">SENSEX</div>
+</div>
+
+<div class="timer">
+⏳ Offer Ends In: <span id="time">05:00</span>
+</div>
+
+<a href="https://t.me/+0CLaYYUlmQ1iMmRl" class="join-btn">
+Join FOR FREE 🚀
+</a>
 
 </div>
 
-<!-- Live Join Notification -->
-<div class="live" id="liveBox"></div>
+<div class="notification" id="notify"></div>
 
 <script>
-const names = ["Rahul","Amit","Sneha","Vikas","Priya","Arjun","Rohit"];
+
+/* LIVE COUNTER */
+let count = 61234;
+setInterval(()=>{
+    count += Math.floor(Math.random()*3);
+    document.getElementById("members").innerText = count;
+},3000);
+
+/* COUNTDOWN */
+let time = 300;
+setInterval(()=>{
+    let min = Math.floor(time/60);
+    let sec = time%60;
+    document.getElementById("time").innerText =
+    `${min}:${sec<10?'0'+sec:sec}`;
+    if(time>0) time--;
+},1000);
+
+/* FAKE JOIN NOTIFICATIONS */
+let names = ["Rahul","Amit","Sneha","Priya","Rohit","Karan","Anjali"];
+let notify = document.getElementById("notify");
 
 setInterval(()=>{
-  let name = names[Math.floor(Math.random()*names.length)];
-  let box = document.getElementById("liveBox");
+    let name = names[Math.floor(Math.random()*names.length)];
+    notify.innerText = `${name} just joined 🚀`;
+    notify.style.display = "block";
 
-  box.innerText = name + " just joined 🚀";
-  box.style.display = "block";
-
-  setTimeout(()=>{
-    box.style.display = "none";
-  },3000);
+    setTimeout(()=>{
+        notify.style.display = "none";
+    },3000);
 
 },5000);
+
 </script>
 
 </body>
